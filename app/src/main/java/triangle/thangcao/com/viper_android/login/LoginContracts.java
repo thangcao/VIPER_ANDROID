@@ -33,7 +33,7 @@ class LoginContracts {
     }
 
     interface Interactor {
-        void login(Account account, InteractorOutput interactorOutput);
+        void login(Account account);
     }
 
     interface InteractorOutput {

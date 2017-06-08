@@ -6,9 +6,14 @@ import triangle.thangcao.com.viper_android.login.LoginContracts;
 
 public class LoginInteractor implements LoginContracts.Interactor {
 
+    LoginContracts.InteractorOutput interactorOutput;
+
+    public LoginInteractor(LoginContracts.InteractorOutput interactorOutput) {
+        this.interactorOutput = interactorOutput;
+    }
 
     @Override
-    public void login(Account account, LoginContracts.InteractorOutput interactorOutput) {
+    public void login(Account account) {
         if (isValidateAccount(account)) {
             interactorOutput.onLoginError("Login error");
             return;

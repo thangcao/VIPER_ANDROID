@@ -9,7 +9,7 @@ public class LoginPresenter implements LoginContracts.Presenter, LoginContracts.
     private LoginContracts.View view;
     private Activity activity;
     private LoginContracts.Router router = new LoginRouter();
-    private LoginInteractor loginInteractor = new LoginInteractor();
+    private LoginInteractor loginInteractor = new LoginInteractor(this);
 
     public LoginPresenter(LoginContracts.View view, Activity activity) {
         this.view = view;
@@ -24,7 +24,7 @@ public class LoginPresenter implements LoginContracts.Presenter, LoginContracts.
 
     @Override
     public void onLoginButtonPressed(Account account) {
-        loginInteractor.login(account, this);
+        loginInteractor.login(account);
     }
 
     @Override

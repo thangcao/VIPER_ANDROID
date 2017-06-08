@@ -1,21 +1,31 @@
 package triangle.thangcao.com.viper_android.home.playpoker;
 
+import java.util.List;
+
+import triangle.thangcao.com.viper_android.enity.Poker;
+
 public class PlayPokerContracts {
 
-    interface View{
-
+    public interface View {
+        void showListPokers(List<Poker> pokers);
+        void showNoContent();
     }
 
-    interface Interactor{
-
+    public interface InteractorOutput {
+        void pokersFetched(List<Poker> pokers);
     }
 
-    interface Router{
-
+    public interface Interactor {
+        void fetchPokers();
     }
 
-    interface Presenter{
+    public interface Router {
+        void goToDetailScreen(Poker poker);
+    }
 
+    public interface Presenter {
+        void loadPokers();
+        void showDetail(Poker poker);
     }
 
 }
