@@ -14,10 +14,7 @@ public class LoginInteractor implements LoginContracts.Interactor {
 
     @Override
     public void login(Account account) {
-        if (isValidateAccount(account)) {
-            interactorOutput.onLoginError("Login error");
-            return;
-        }
+
         interactorOutput.onLoginSuccess(account);
     }
 

@@ -11,6 +11,11 @@ public class PlayPokerContracts {
         void showNoContent();
     }
 
+    public interface Presenter {
+        void loadPokers();
+        void showDetail(Poker poker);
+    }
+
     public interface InteractorOutput {
         void pokersFetched(List<Poker> pokers);
     }
@@ -23,9 +28,6 @@ public class PlayPokerContracts {
         void goToDetailScreen(Poker poker);
     }
 
-    public interface Presenter {
-        void loadPokers();
-        void showDetail(Poker poker);
-    }
+
 
 }

@@ -20,6 +20,7 @@ public class LoginActivity extends BaseActivity implements LoginContracts.View {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override

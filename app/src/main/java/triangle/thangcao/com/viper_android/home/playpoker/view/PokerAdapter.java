@@ -1,4 +1,4 @@
-package triangle.thangcao.com.viper_android.home.playpoker;
+package triangle.thangcao.com.viper_android.home.playpoker.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import triangle.thangcao.com.viper_android.R;
@@ -19,9 +20,9 @@ public class PokerAdapter extends RecyclerView.Adapter<PokerAdapter.MyViewHolder
     private Context context;
     private List<Poker> pokers;
 
-    public PokerAdapter(Context context, List<Poker> pokers) {
-        this.pokers = pokers;
+    public PokerAdapter(Context context) {
         this.context = context;
+        this.pokers = new ArrayList<>();
     }
 
     @Override
@@ -53,4 +54,24 @@ public class PokerAdapter extends RecyclerView.Adapter<PokerAdapter.MyViewHolder
             description = (TextView) view.findViewById(R.id.description_poker);
         }
     }
+
+    public void addPoker(Poker poker){
+        if (pokers.isEmpty()){
+            pokers = new ArrayList<>();
+        }
+        pokers.add(poker);
+        notifyDataSetChanged();
+    }
+
+    public void addPokers(List<Poker> pokers){
+        if (!this.pokers.isEmpty()) {
+            this.pokers.clear();
+        }
+        this.pokers.addAll(pokers);
+        notifyDataSetChanged();
+    }
+
+
+
+
 }

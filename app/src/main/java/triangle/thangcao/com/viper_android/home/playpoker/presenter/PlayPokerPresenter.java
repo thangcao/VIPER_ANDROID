@@ -10,7 +10,8 @@ import triangle.thangcao.com.viper_android.home.playpoker.PlayPokerContracts;
 import triangle.thangcao.com.viper_android.home.playpoker.interactor.PlayPokerInteractor;
 import triangle.thangcao.com.viper_android.home.playpoker.router.PlayPokerRouter;
 
-public class PlayPokerPresenter implements PlayPokerContracts.Presenter, PlayPokerContracts.InteractorOutput {
+public class PlayPokerPresenter implements PlayPokerContracts.Presenter,
+        PlayPokerContracts.InteractorOutput {
 
     private PlayPokerContracts.View view;
     private PlayPokerContracts.Interactor interactor;

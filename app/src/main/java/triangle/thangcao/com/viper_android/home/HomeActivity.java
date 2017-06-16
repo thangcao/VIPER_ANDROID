@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 
 import triangle.thangcao.com.viper_android.R;
 import triangle.thangcao.com.viper_android.common.BaseActivity;
-import triangle.thangcao.com.viper_android.home.playpoker.PlayPokerFragment;
+import triangle.thangcao.com.viper_android.home.playpoker.view.PlayPokerFragment;
 import triangle.thangcao.com.viper_android.home.setting.SettingsFragment;
 import triangle.thangcao.com.viper_android.home.timer.TimerFragment;
 
